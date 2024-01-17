@@ -1,7 +1,15 @@
 /* Use this file to store your useful variables */
 /* This could be colors, fonts, or padding sizes! */
 
-:root {
+/* :root {
   --color-primary: #7be447;
   --color-secondary: #1f1f1f;
+} */
+
+:root {
+  --color-secondary: hsl(196, 47%, 17%);
+  --c-light: hsl(196, 0%, 100%);
+  --c-mid: hsl(191, 10%, 79%);
+
+  --marg: 10%;
 }

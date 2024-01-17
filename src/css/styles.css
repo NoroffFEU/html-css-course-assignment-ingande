@@ -3,17 +3,263 @@
 /* Files that are only needed to be imported are called partials */
 /* These are marked with an underscore: */
 @import url("./_variables.css");
+
+@import url(typography.css);
+
+
+
 /* Feel free to add as many of these imports as you need */
+
+
+html {
+  height: 100%;
+}
 
 body {
   color: var(--color-primary);
   background-color: var(--color-secondary);
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+header img {
+  height: 2rem;
+}
+
+header ul {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: end; */
+}
+
+/* header img {
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+header li {
+  /*   display: inline-block;
+ */
+}
+
+header ul {
+  width: 20%;
+  /* noe mer elegant og skalerbart her? */
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+
+}
+
+header a {
+  text-decoration: none;
+  text-transform: uppercase;
+  /* blir gjentatt i nav */
+  font-size: 1.1em;
+
+}
+
+nav {
+  /* fikse rom før og etter meny */
+  margin: 0 2rem;
+}
+
+nav a {
+  color: hsl(196, 47%, 17%);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+
+header,
+footer {
+  background-color: var(--c-mid);
+  /* padding: .5rem 5rem; */
+  /* padding: .5rem var(--marg); */
+  /* mer rom over enn under.. */
+  padding: 2rem var(--marg) .5rem;
+
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+footer img {
+  height: 4rem;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+main {
+  margin: 0 var(--marg);
+  background-color: var(--c-light);
+}
+
+/* 
+
+Index page
+
+*/
+.hero_section {
+  /* width: 100%;
+  position: relative; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero_section img {
+  width: 100%;
+  filter: opacity(75%);
+  /* position: relative; */
+}
+
+.text-box {
+  color: hsl(196, 47%, 17%);
+  /* position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
+  z-index: 100;
+
+  position: absolute;
+  /* width: 50%;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-top: 20px; */
+
+}
+
+.gallery div img {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+}
+
+.gallery {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.picture-square {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.picture-square img {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+}
+
+
+
+
+
+/*
+
+About
+
+*/
+
+p {
+  /*   max-width: 600px; */
+  color: hsl(196, 47%, 17%);
+  padding-bottom: 1rem;
+
+}
+
+
+.content {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.aboutuslogo {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.content img {
+  max-width: 100%;
+  padding-bottom: 1rem;
 }
 
 .centered {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: center;
   text-align: center;
+}
+
+/*  CONTACT  */
+
+.contact h1 {
+  font-size: 2.488rem;
+  padding: 1rem 0 0 0;
+  text-align: center;
+  background-color: aqua;
+}
+
+.contact h3 {
+  padding: 1rem 0;
+}
+
+
+
+
+/* Laptop and Desktop */
+
+/* @media (max-width: 1500px) {
+
+  header img {
+    height: 2rem;
+  }
+
+} */
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+  header img {
+    height: 1.5rem;
+  }
+
+}
+
+/* Mobile version*/
+
+@media (max-width: 300px) {
+
+  header img {
+    height: 1rem;
+  }
+
 }
