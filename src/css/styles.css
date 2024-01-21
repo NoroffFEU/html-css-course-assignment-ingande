@@ -6,11 +6,6 @@
 
 @import url(typography.css);
 
-
-
-/* Feel free to add as many of these imports as you need */
-
-
 html {
   height: 100%;
 }
@@ -25,72 +20,56 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-header nav {
-  display: flex;
-  /*   justify-content: space-between;
- */
-  /*   align-items: end;
- */
-}
-
-
-
-header img {
-  justify-self: center;
-  height: 2rem;
-}
-
-header ul {
-  /* noe mer elegant og skalerbart her? */
-  display: flex;
-  gap: 1rem;
-  /* justify-content: space-between; */
-  list-style-type: none;
-
-}
-
-header a {
-  text-decoration: none;
-  font-size: 1.1em;
-
-}
-
 nav {
   /* fikse rom før og etter meny */
   margin: 0 1rem;
 }
 
-nav a {
-  color: hsl(196, 47%, 17%);
-  text-decoration: none;
-  text-transform: uppercase;
+nav ul {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+
+header .center {
+  position: absolute;
+}
+
+header img {
+  height: 2rem;
+
 }
 
 .right {
   margin-left: auto;
-  justify-self: right;
+}
+
+nav a {
+  color: hsl(196, 47%, 17%);
+  display: block;
+  font-size: 1.1em;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 header,
 footer {
   background-color: var(--c-mid);
-  padding: 2rem var(--marg) .5rem;
+  padding: 2rem var(--marg) 1rem;
   font-weight: bold;
 
 }
 
 footer ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
+  justify-content: left;
 }
 
 footer img {
   height: 4rem;
-}
-
-footer li {
-  list-style-type: none;
+  padding-right: 2rem;
 }
 
 main {
