@@ -101,9 +101,10 @@ main {
 
 button,
 .fake-button {
-  display: flex;
+  /* display: flex; */
   padding: .2rem 2rem;
-  margin: 1rem 0;
+  /* margin: 1rem 1rem; */
+  margin: .5rem 0;
   background-color: var(--c-mid);
   font-weight: bold;
   max-width: 14rem;
@@ -112,6 +113,11 @@ button,
 .fake-button {
   appearance: button;
   text-decoration: none;
+  text-align: center;
+  /* margin-left: 1rem; */
+}
+
+.marg-left {
   margin-left: 1rem;
 }
 
