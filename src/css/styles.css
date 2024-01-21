@@ -585,6 +585,14 @@ label {
   header img {
     height: 1.4rem;
   }
+
+  .product-details {
+    flex-direction: column;
+  }
+
+  .product-details div {
+    width: unset;
+  }
 }
 
 @media (max-width: 500px) {
