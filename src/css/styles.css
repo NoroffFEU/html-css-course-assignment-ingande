@@ -1,8 +1,8 @@
 /* Use import to split up your CSS into manageable chunks */
-@import url("./_reset.css");
+@import url("./reset.css");
 /* Files that are only needed to be imported are called partials */
 /* These are marked with an underscore: */
-@import url("./_variables.css");
+@import url("./variables.css");
 
 @import url(typography.css);
 
@@ -27,50 +27,37 @@ body {
 
 header nav {
   display: flex;
-  justify-content: space-between;
-  align-items: end;
+  /*   justify-content: space-between;
+ */
+  /*   align-items: end;
+ */
 }
 
+
+
 header img {
+  justify-self: center;
   height: 2rem;
 }
 
 header ul {
-  /* display: flex;
-  justify-content: space-between;
-  align-items: end; */
-}
-
-/* header img {
-  margin-left: auto;
-  margin-right: auto;
-} */
-
-header li {
-  /*   display: inline-block;
- */
-}
-
-header ul {
-  width: 20%;
   /* noe mer elegant og skalerbart her? */
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
+  /* justify-content: space-between; */
   list-style-type: none;
 
 }
 
 header a {
   text-decoration: none;
-  text-transform: uppercase;
-  /* blir gjentatt i nav */
   font-size: 1.1em;
 
 }
 
 nav {
   /* fikse rom før og etter meny */
-  margin: 0 2rem;
+  margin: 0 1rem;
 }
 
 nav a {
@@ -79,15 +66,16 @@ nav a {
   text-transform: uppercase;
 }
 
-
+.right {
+  margin-left: auto;
+  justify-self: right;
+}
 
 header,
 footer {
   background-color: var(--c-mid);
-  /* padding: .5rem 5rem; */
-  /* padding: .5rem var(--marg); */
-  /* mer rom over enn under.. */
   padding: 2rem var(--marg) .5rem;
+  font-weight: bold;
 
 }
 
@@ -108,7 +96,72 @@ footer li {
 main {
   margin: 0 var(--marg);
   background-color: var(--c-light);
+  padding: 0 0 2rem 0;
 }
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 3rem;
+
+}
+
+.slim {
+  max-width: 750px;
+}
+
+.content-header {
+  font-size: 1.728rem;
+  /* H4 */
+  padding: .5rem 0;
+  margin: .5rem 0 2rem 0;
+  text-align: center;
+  background-color: var(--c-mid);
+  width: 100%;
+}
+
+button {
+  display: flex;
+  padding: .2rem 2rem;
+  margin: 1rem 0;
+  background-color: var(--c-mid);
+  font-weight: bold;
+  max-width: 14rem;
+}
+
+.btn-checkout {
+  background-color: rgb(213, 165, 117);
+}
+
+form button {
+  margin-left: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-top: 2rem;
+}
+
+.left-right {
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  color: hsl(196, 47%, 17%);
+  padding: .5rem 0;
+
+}
+
+
+
+
+/* ########### Page specific below ##########  */
+
+
+
 
 /* 
 
@@ -116,36 +169,27 @@ Index page
 
 */
 .hero_section {
-  /* width: 100%;
-  position: relative; */
-
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .hero_section img {
   width: 100%;
   filter: opacity(75%);
-  /* position: relative; */
 }
 
-.text-box {
+.hero_section h1 {
   color: hsl(196, 47%, 17%);
-  /* position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); */
   z-index: 100;
-
   position: absolute;
-  /* width: 50%;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  padding-top: 20px; */
+  text-shadow: 3px 3px 5px var(--c-light);
 
+}
+
+.left-right button {
+  margin-left: 1rem;
 }
 
 .gallery div img {
@@ -176,7 +220,9 @@ Index page
   object-fit: cover;
 }
 
-
+.IGtext {
+  padding-left: 1rem;
+}
 
 
 
@@ -186,20 +232,11 @@ About
 
 */
 
-p {
-  /*   max-width: 600px; */
-  color: hsl(196, 47%, 17%);
-  padding-bottom: 1rem;
 
+p span {
+  font-weight: bold;
 }
 
-
-.content {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-
-}
 
 .aboutuslogo {
   padding-top: 1rem;
@@ -208,7 +245,7 @@ p {
 
 .content img {
   max-width: 100%;
-  padding-bottom: 1rem;
+  padding: .5rem 0;
 }
 
 .centered {
@@ -218,21 +255,174 @@ p {
   text-align: center;
 }
 
-/*  CONTACT  */
+/*  
 
-.contact h1 {
-  font-size: 2.488rem;
-  padding: 1rem 0 0 0;
-  text-align: center;
-  background-color: aqua;
-}
+CONTACT  
+
+*/
 
 .contact h3 {
-  padding: 1rem 0;
+  padding-bottom: 1rem;
+}
+
+.contact p {
+  padding-bottom: 2rem;
+}
+
+
+/* 
+
+SHOP 
+
+*/
+
+
+.product-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product {
+  margin-bottom: 1rem;
+}
+
+.product img {
+  height: 250px;
+  width: 200px;
+  object-fit: cover;
+  padding: 1rem 1rem;
+}
+
+.product p {
+  padding: 0;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+/*  Product DEtails   */
+
+.product-details {
+  display: flex;
+  gap: 1rem;
+}
+
+.product-details div {
+  width: 50%;
+}
+
+.product-details img {
+  border: 1px solid var(--c-mid);
+}
+
+.product-details h1 {
+  font-size: 1.728rem;
+  /*H4 size (seo)*/
+
+}
+
+.product-details h5 {
+  font-weight: unset;
+}
+
+.product-details .size {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.product-details .size>div {
+  display: flex;
+  height: 2rem;
+  width: 2rem;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.product-details .size label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: inherit;
+  width: inherit;
+  z-index: 10;
+}
+
+.product-details .size input[type="radio"] {
+  position: absolute;
+  appearance: none;
+  background-color: var(--c-mid);
+  border-radius: 50%;
+  margin: 0;
+  height: inherit;
+  width: inherit;
+}
+
+.product-details .size input[type="radio"]:checked {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-secondary);
+  box-shadow: .1rem .2rem .3rem hsl(0 0% 30%);
 }
 
 
 
+
+/*    CHECKOUT    */
+
+.bag {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bag p {
+  text-align: right;
+}
+
+.checkout h6 {
+  font-weight: bold;
+}
+
+.checkout p {
+  font-weight: bold;
+}
+
+.checkout input {
+  width: 100%;
+}
+
+.checkout-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+label {
+  display: block;
+  /* margin-top: 1rem; */
+}
+
+
+/*  CHECKOUT SUCCESSFUL*/
+
+.success {
+  text-align: center;
+}
+
+.success p {
+  padding-bottom: 4rem;
+}
+
+.success h1 {
+  padding-top: 4rem;
+}
+
+.success img {
+  max-width: 20%;
+  padding: 4rem 0;
+}
 
 /* Laptop and Desktop */
 
@@ -246,12 +436,37 @@ p {
 
 /* Tablet */
 
-@media (max-width: 900px) {
+/* @media (max-width: 1000px) 
+.hero_section h1 {
+  font-size: 
+} */
+
+@media (max-width: 1000px) {
 
   header img {
     height: 1.5rem;
   }
 
+  .hero_section h1 {
+    font-size: 1.728rem;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .hero_section h1 {
+    font-size: 1.44rem;
+  }
+
+  main {
+    margin: 0 0;
+  }
+
+  .product {
+    display: flex;
+    justify-self: center;
+  }
 }
 
 /* Mobile version*/

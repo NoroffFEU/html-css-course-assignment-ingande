@@ -10,6 +10,7 @@
   --color-secondary: hsl(196, 47%, 17%);
   --c-light: hsl(196, 0%, 100%);
   --c-mid: hsl(191, 10%, 79%);
+  --c-text: hsl(196, 47%, 17%);
 
   --marg: 10%;
 }
