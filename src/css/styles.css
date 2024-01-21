@@ -40,7 +40,6 @@ header .center {
 
 header img {
   height: 2rem;
-
 }
 
 .right {
@@ -54,6 +53,80 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
 }
+
+/* burger test */
+/* 
+#menu-toggle {
+  display: none;
+}
+
+.burger-container {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  height: 2rem;
+  width: 2rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.burger-button,
+.burger-button::before,
+.burger-button::after {
+  display: block;
+  position: absolute;
+  background-color: gray;
+  height: .2rem;
+  width: 2rem;
+}
+
+.burger-button::before {
+  content: '';
+  margin-top: -.5rem;
+}
+
+.burger-button::after {
+  content: '';
+  margin-top: .5rem;
+}
+
+#menu-toggle:checked+.burger-container .burger-button::before {
+  margin-top: 0;
+}
+
+#menu-toggle:checked+.burger-container .burger-button {
+  background-color: gray;
+}
+
+#menu-toggle:checked+.burger-container .burger-button::after {
+  margin-top: 0;
+}
+
+@media (max-width: 500px) {
+  .burger-container {
+    display: flex;
+  }
+
+  header nav ul {
+    position: absolute;
+    top: 0;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ 
+  }
+
+  header nav .right {
+    margin-left: unset;
+  }
+
+  header .center {
+ 
+    top: 0;
+  }
+} */
+
 
 header,
 footer {
@@ -173,6 +246,7 @@ Index page
 }
 
 .hero_section h1 {
+  font-size: 2.074rem;
   color: hsl(196, 47%, 17%);
   z-index: 100;
   position: absolute;
@@ -196,18 +270,11 @@ Index page
 .gallery {
   padding: 1rem;
   display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: space-between;
   gap: 1rem;
-  /*   row-gap: 1rem;
- */
 }
 
 .gallery>div {
   display: grid;
-  /* flex */
-  /* flex-basis: calc(33.33% - .6rem); */
-  /* flex-basis: calc(25% - .6rem); */
   width: 25%;
   position: relative;
 }
@@ -218,7 +285,6 @@ Index page
   object-fit: cover;
 }
 
-/* denne ble overstyrt i typography... hmm*/
 .gallery p {
   color: var(--c-light);
   font-weight: bold;
@@ -229,14 +295,10 @@ Index page
   background-color: hsl(0 100% 100% / .7);
   border-radius: 1rem;
   padding: .3rem .7rem;
-
-
-  /*  hsl(0 0 50%); */
 }
 
 .gallery p a {
   text-decoration: none;
-  /* color: var(--c-text); */
 }
 
 .gallery span {
@@ -472,26 +534,40 @@ label {
   font-size: 
 } */
 
-@media (max-width: 1000px) {
+/* > 1000 */
+@media (min-width: 1000px) {
+
+  :root {
+    --marg: 15%;
+  }
 
   header img {
     height: 1.5rem;
   }
 
   .hero_section h1 {
-    font-size: 1.728rem;
+    font-size: 1rem;
   }
 
 }
 
-@media (max-width: 600px) {
+/* < 750 */
+@media (max-width: 750px) {
+
+  :root {
+    --marg: 4%;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
 
   .hero_section h1 {
     font-size: 1.44rem;
-  }
-
-  main {
-    margin: 0 0;
   }
 
   .product {
@@ -500,9 +576,74 @@ label {
   }
 }
 
+@media (max-width: 600px) {
+
+  nav {
+    font-size: 1rem;
+  }
+
+  header img {
+    height: 1.4rem;
+  }
+}
+
+@media (max-width: 500px) {
+
+  nav {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    position: unset;
+  }
+
+  header .center {
+    top: .5rem;
+  }
+
+  header nav .right {
+    margin-left: unset;
+  }
+
+  header img {
+    height: 1rem;
+  }
+
+  .hero_section h1 {
+    font-size: 1rem;
+  }
+
+  .gallery {
+    flex-direction: column;
+    /* justify-content: center; */
+    /* width: 100%; */
+  }
+
+  .gallery>div {
+    width: 100%;
+  }
+
+  footer img {
+    padding-right: unset;
+  }
+
+  .product-details {
+    flex-direction: column;
+  }
+
+  .product-details div {
+    width: unset;
+  }
+}
+
 /* Mobile version*/
 
-@media (max-width: 300px) {
+@media (max-width: 350px) {
+
+  main {
+    margin: 0 0;
+  }
 
   header img {
     height: 1rem;
