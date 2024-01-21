@@ -1,24 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
-* {
-    color: var(--color-secondary);
-    font-family: 'Open Sans', sans-serif;
-}
-
 :root {
     font-size: 100%;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a {
-    color: hsl(196, 47%, 17%);
     font-family: 'Open Sans', sans-serif;
+    color: var(--c-text)
 }
 
 h1 {
@@ -47,4 +32,13 @@ h6 {
 
 p {
     font-size: 1rem;
+}
+
+a {
+    font-size: 1rem;
+    color: var(--c-text);
+}
+
+a:visited {
+    color: var(--c-text);
 }

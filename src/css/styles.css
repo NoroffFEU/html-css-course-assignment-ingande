@@ -99,13 +99,20 @@ main {
   width: 100%;
 }
 
-button {
+button,
+.fake-button {
   display: flex;
   padding: .2rem 2rem;
   margin: 1rem 0;
   background-color: var(--c-mid);
   font-weight: bold;
   max-width: 14rem;
+}
+
+.fake-button {
+  appearance: button;
+  text-decoration: none;
+  margin-left: 1rem;
 }
 
 .btn-checkout {
@@ -171,32 +178,71 @@ Index page
   margin-left: 1rem;
 }
 
-.gallery div img {
+/* .gallery div img {
   height: 250px;
   width: 250px;
   object-fit: cover;
-}
+} */
+
+
+
 
 .gallery {
   padding: 1rem;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
+  gap: 1rem;
+  /*   row-gap: 1rem;
+ */
 }
 
-.picture-square {
-  padding: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
+.gallery>div {
+  display: grid;
+  /* flex */
+  /* flex-basis: calc(33.33% - .6rem); */
+  /* flex-basis: calc(25% - .6rem); */
+  width: 25%;
+  position: relative;
 }
 
-.picture-square img {
-  height: 250px;
-  width: 250px;
+.gallery img {
+  height: 100%;
+  max-width: 100%;
   object-fit: cover;
+}
+
+/* denne ble overstyrt i typography... hmm*/
+.gallery p {
+  color: var(--c-light);
+  font-weight: bold;
+  position: absolute;
+  align-self: end;
+  margin-bottom: 2rem;
+  justify-self: center;
+  background-color: hsl(0 100% 100% / .7);
+  border-radius: 1rem;
+  padding: .3rem .7rem;
+
+
+  /*  hsl(0 0 50%); */
+}
+
+.gallery p a {
+  text-decoration: none;
+  /* color: var(--c-text); */
+}
+
+.gallery span {
+  background: url(/assets/external/Instagram_Glyph_White.svg);
+  height: 1rem;
+  width: 1rem;
+  opacity: 80%;
+  position: absolute;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  align-self: end;
+  justify-self: end;
 }
 
 .IGtext {
@@ -281,7 +327,7 @@ SHOP
   font-weight: bold;
 }
 
-/*  Product DEtails   */
+/*  Product Details   */
 
 .product-details {
   display: flex;
